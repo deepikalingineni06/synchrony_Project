@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "19e1df3d-309b-481d-8546-62348e971642",
+		"name": "imageUpDown",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30347421",
+		"_collection_link": "https://warped-sunset-217651.postman.co/workspace/New-Team-Workspace~22c295c8-4321-48ee-84cf-5fadf554a6a7/collection/30347421-19e1df3d-309b-481d-8546-62348e971642?action=share&source=collection_link&creator=30347421"
+	},
+	"item": [
+		{
+			"name": "SAVE USER",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJERUZBVUxUIiwiaWF0IjoxNzE2MjkyMTU2LCJleHAiOjE3MTYyOTM5NTZ9.-rGlwq-UBdt6S7qi1Z1oe4fLQM7_oYa5VizH6hN50ls",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\":\"rajuPrem\",\n    \"password\":\"prem\",\n    \"firstName\":\"raju\",\n    \"lastName\":\"sharma\",\n    \"email\":\"rk.sharma7794@gmail.com\",\n    \"active\":1,\n    \"roles\":\"admin\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4442/users/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4442",
+					"path": [
+						"users",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET USERS",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJERUZBVUxUIiwiaWF0IjoxNzE2MjkyMTU2LCJleHAiOjE3MTYyOTM5NTZ9.-rGlwq-UBdt6S7qi1Z1oe4fLQM7_oYa5VizH6hN50ls",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4442/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4442",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPLOAD IMAGES",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJERUZBVUxUIiwiaWF0IjoxNzE2MjkyMTU2LCJleHAiOjE3MTYyOTM5NTZ9.-rGlwq-UBdt6S7qi1Z1oe4fLQM7_oYa5VizH6hN50ls",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"urls\":[\n            \"https://lh3.googleusercontent.com/86arOE_jc_FYR6_mPbeXrzWB4LwvgCRWPGXbbftgG4_zAjY05ajbmq3xiG0Xc_uYCoTccikGvLdo5WIlofH5pmySn1VRejqngh2pwDLquiLJYayCOJKUrZKFnOwmSxKzQqqOM1y5o42TPk6LYR1vbPjrEPx3dQIUEwS4IPRjzt3JdPZT32TkqCECm-PoQtsBAPnyN6g46PbiyD9fblgzuBcT2xuO1AaZgOkR53bom8ATCBkDgcYT_mnsxWuxLGp6cNFUR4lWBFKyYkYJWJY--KmIVCWDDoJ3SxwjimGjwRG-X2Qu3AP4wa6tRazHuBo3a8IOofm6f5arSRdpVy4AaXoacTPz8TSkcofA0YaIttHpek1Gi5v1yMSbi5mHV6Mfv4lyczXPp8c5iNR7IFPvgMz1BiCETTxNwSvDjb2JCN94_256Fzejrs-Dk-kMYeCCYQh2Zd_lt9xiEQDgZ5gufdpxxM9xDiP447vrOqKbBMcAS_6hu43EwRi97ILAhBpS3QLP-4WhKf4GHauWqML_EcBvhszB-6T1iGeCWvpAT9jZVDVgekalBvLZiZNoy5Ow9QlnHA=w1827-h711-no?.jpg\",\n            \"https://img.freepik.com/free-photo/autumn-leaf-falling-revealing-intricate-leaf-vein-generated-by-ai_188544-9869.jpg?size=626&ext=jpg&ga=GA1.1.2082370165.1716163200&semt=ais_user.jpg\",\n            \"https://img.freepik.com/premium-photo/background-with-leaves-generative-ai_566661-21931.jpg?size=626&ext=jpg&ga=GA1.1.2082370165.1715904000&semt=ais_user.jpg\"\n\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4442/v1/images/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4442",
+					"path": [
+						"v1",
+						"images",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET IMAGE DETAILS BY ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJERUZBVUxUIiwiaWF0IjoxNzE2MjkyMTU2LCJleHAiOjE3MTYyOTM5NTZ9.-rGlwq-UBdt6S7qi1Z1oe4fLQM7_oYa5VizH6hN50ls",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4442/v1/images/upload/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4442",
+					"path": [
+						"v1",
+						"images",
+						"upload",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\":\"DEFAULT\",\n    \"password\":\"DEFAULT\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4442/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4442",
+					"path": [
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
